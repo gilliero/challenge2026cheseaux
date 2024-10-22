@@ -213,3 +213,7 @@ img {
     height: 75px;
     text-align: center;
 }
+
+p {
+margin: 0px;
+}
