@@ -9,14 +9,14 @@ body {
     background-size: cover; /* L'image couvre toute la zone en maintenant ses proportions */
     background-position: center; /* Centre l'image */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
-    font-size: 16px; /* Taille de police par défaut */
+    font-size: 100%; /* Taille de police par défaut */
 }
 
 /* Header */
 header {
     background: #00c8ff;
     color: #ff9100;
-    padding: 0px 0px;
+    padding: 10px 0px;
     text-align: center;
 }
 
@@ -37,7 +37,7 @@ header p {
 /* Navigation */
 nav {
     background: #00c8ff;
-    color: #ff9100;
+    color: #ffffff;
     padding: 10px;
     text-align: center;
 }
@@ -87,13 +87,17 @@ section h3 {
 /* Footer */
 footer {
     background: #00c8ff;
-    color: #fff;
+    color: #ffffff;
+    padding: 20px;
     text-align: center;
-    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 footer p {
-    margin: 5px 0;
+    margin: 0;
+    color: #fff;
 }
 
 footer a {
@@ -215,5 +219,39 @@ img {
 }
 
 p {
-margin: 0px;
+    margin: 0px;
+}
+
+/* Conteneur pour vidéo YouTube */
+.youtube-video-container {
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+}
+
+.youtube-video-container::after {
+    display: block;
+    content: "";
+    padding-top: 56.25%;
+}
+
+.youtube-video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 80%;
+}
+
+/* Adaptation de la mise en page du timer sur petit écran */
+@media (max-width: 600px) {
+    #timer {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .time-box {
+        width: 45%;
+        margin-bottom: 10px;
+    }
 }

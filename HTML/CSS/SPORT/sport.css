@@ -73,7 +73,7 @@ nav ul li img.logo {
 
 /* Section générale */
 section {
-    padding: 20px;
+    padding: 0px 0px 20px 0px;
     margin: 20px 0;
     background: rgba(255, 255, 255, 0.9); /* Légèrement transparent */
     border-radius: 5px;
@@ -85,27 +85,27 @@ section {
 
 /* Sections des sports */
 .sport {
-    border: 1px solid #ddd;
+    border: 1px solid black;
     border-radius: 5px;
     padding: 15px;
     margin-bottom: 20px;
-    background-color: #e6f7ff; /* Couleur de fond douce pour les sections de sport */
     width: calc(50% - 40px); /* Largeur pour deux colonnes, avec espace pour les marges */
     box-sizing: border-box; /* Inclure le padding et la bordure dans la largeur totale */
 }
 
 /* Style pour les images de sport */
 .sport img.sport-image {
-    width: 100%; /* Largeur à 100% du conteneur */
+    width: 80%; /* Largeur à 100% du conteneur */
     height: auto; /* Hauteur automatique pour maintenir les proportions */
     border-radius: 5px; /* Coins arrondis pour les images */
-    margin-bottom: 10px; /* Marge inférieure pour espacer le texte */
+    margin: 10px 10%; /* Marge inférieure pour espacer le texte */
+
 }
 
 /* Footer */
 footer {
     background: #00c8ff;
-    color: #ff9100;
+    color: #ffffff;
     padding: 20px;
     text-align: center;
     position: relative;
@@ -123,6 +123,36 @@ h2 {
 
 #title {
     text-align: center;
-    width: 555px;  /* Largeur de 300 pixels */
+    width: 80%;  /* Largeur de 300 pixels */
     height: 80px; /* Hauteur de 200 pixels */
+}
+
+footer a {
+    color: #ff9100;
+}
+
+footer a:hover{
+    color: #d17906;
+}
+
+button {
+    background-color: #00c8ff; /* Couleur de fond verte */
+    color: #ffffff; /* Couleur du texte */
+    padding: 10px 20px; /* Espacement interne du bouton */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    font-size: 16px; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    cursor: pointer; /* Curseur en mode pointer (main) */
+    transition: background-color 0.3s, transform 0.3s; /* Animation de la couleur de fond et du mouvement */
+}
+
+button:hover {
+    background-color: #45a049; /* Couleur au survol */
+    transform: scale(1.05); /* Légère agrandissement au survol */
+}
+
+button:active {
+    background-color: #3e8e41; /* Couleur lorsque le bouton est cliqué */
+    transform: scale(0.98); /* Légère réduction au clic */
 }
