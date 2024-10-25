@@ -239,7 +239,9 @@ p {
     height: 100%; /* Adaptation de la hauteur de l'iframe */
 }
 
-
+.active {
+    display: block;
+}
 
 h1 {
     font-size: 40px;
@@ -247,6 +249,11 @@ h1 {
 
 h2 {
     font-size: 40px;
+}
+
+
+.menu-toggle {
+    display: none;
 }
 
 /* Média queries pour écrans plus petits */
@@ -299,3 +306,6 @@ h2 {
         font-size: 2rem;
     }
 }
+
+
+
