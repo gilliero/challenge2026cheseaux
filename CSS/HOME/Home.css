@@ -218,26 +218,7 @@ p {
     margin: 0px;
 }
 
-/* Conteneur pour vidéo YouTube */
-.youtube-video-container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    max-width: 560px;
-    margin: 0 auto; /* Centre horizontalement */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-
-.youtube-video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /* Adaptation de la largeur de l'iframe */
-    height: 100%; /* Adaptation de la hauteur de l'iframe */
-}
 
 .active {
     display: block;
@@ -291,11 +272,6 @@ h2 {
     nav ul li {
         display: block;
         margin: 0.5rem 0;
-    }
-
-    .youtube-video-container iframe {
-        width: 100%;
-        height: auto;
     }
 
     #countdown {
