@@ -226,24 +226,19 @@ p {
 }
 
 /* Conteneur pour vidéo YouTube */
-.youtube-video-container {
+.video-container {
     position: relative;
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+    height: 0;
     overflow: hidden;
-    width: 100%;
-    max-width: 560px;
-    margin: 0 auto; /* Centre horizontalement */
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-
-.youtube-video-container iframe {
+.video-container iframe {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* Adaptation de la largeur de l'iframe */
-    height: 100%; /* Adaptation de la hauteur de l'iframe */
+    width: 100%;
+    height: 100%;
 }
 
 .active {
