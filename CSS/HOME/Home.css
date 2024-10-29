@@ -68,7 +68,7 @@ nav ul li a:hover {
     width: 75px;
     height: 75px;
     vertical-align: middle;
-    margin-left: 50px;
+    margin-left: 20px;
 }
 
 /* Section générale */
@@ -221,6 +221,10 @@ p {
     margin: 0px;
 }
 
+.size {
+    font-size: 30px;
+}
+
 /* Conteneur pour vidéo YouTube */
 .youtube-video-container {
     position: relative;
@@ -254,6 +258,9 @@ h2 {
     font-size: 40px;
 }
 
+.fontsize {
+font-size: 32px;
+}
 
 .menu-toggle {
     display: none;
