@@ -106,7 +106,6 @@ section {
 footer {
     background: #00c8ff;
     color: #ffffff;
-    padding: 20px;
     text-align: center;
     position: relative;
     bottom: 0;
@@ -115,6 +114,16 @@ footer {
 
 footer p {
     margin: 0;
+    color: #fff;
+}
+
+footer a {
+    color: #ff9100;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 h2 {
@@ -135,24 +144,24 @@ footer a:hover{
     color: #d17906;
 }
 
-button {
-    background-color: #00c8ff; /* Couleur de fond verte */
-    color: #ffffff; /* Couleur du texte */
-    padding: 10px 20px; /* Espacement interne du bouton */
-    border: none; /* Pas de bordure */
-    border-radius: 5px; /* Coins arrondis */
-    font-size: 16px; /* Taille du texte */
-    font-weight: bold; /* Texte en gras */
-    cursor: pointer; /* Curseur en mode pointer (main) */
-    transition: background-color 0.3s, transform 0.3s; /* Animation de la couleur de fond et du mouvement */
+/* Bouton stylisé */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff9100;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
-button:hover {
-    background-color: #45a049; /* Couleur au survol */
-    transform: scale(1.05); /* Légère agrandissement au survol */
+.btn:hover {
+    background: #ff4500;
 }
 
-button:active {
-    background-color: #3e8e41; /* Couleur lorsque le bouton est cliqué */
-    transform: scale(0.98); /* Légère réduction au clic */
+@media (max-width: 897px) {
+.sport {
+width: 90%;
+height: auto;
+}
 }
