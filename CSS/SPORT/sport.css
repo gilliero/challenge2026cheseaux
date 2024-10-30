@@ -156,3 +156,7 @@ button:active {
     background-color: #3e8e41; /* Couleur lorsque le bouton est cliqué */
     transform: scale(0.98); /* Légère réduction au clic */
 }
+
+.salut {
+color: red;
+}
