@@ -261,6 +261,11 @@ font-size: 32px;
     display: none;
 }
 
+.ytp-pause-overlay {
+    display: none;
+}
+
+
 /* Média queries pour écrans plus petits */
 @media (max-width: 768px) {
 
