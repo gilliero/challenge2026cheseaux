@@ -13,55 +13,62 @@
 }
 
 
-/* Dropdown Button */
+/* Bouton du menu avec une apparence élégante */
 .dropbtn {
   background-color: #ff9100;
   color: white;
-  padding: 16px;
-  font-size: 16px;
+  padding: 10px;
+  font-size: 18px;
   border: none;
+  width: 50px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
 }
 
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
+.dropbtn:hover {
+  background-color: #e07f00;
 }
 
-/* Dropdown Content (Hidden by Default) */
+/* Conteneur du menu déroulant avec un effet de flou et des bordures arrondies */
 .dropdown-content {
-  display: none;
   position: absolute;
-  right: 100%;
-  background-color: #f1f1f1;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  width: 100%;
-
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  visibility: hidden; /* Gère l’affichage pour l’animation */
 }
 
-/* Links inside the dropdown */
+/* Liens du menu */
 .dropdown-content a {
-  color: black;
+  color: #333;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
   width: 100%;
+  transition: background-color 0.3s ease;
 }
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #e07f00;}
-
+/* Classe pour afficher le menu avec animation */
 .dropdown-content.show {
-        display: block;
-    }
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible; /* Permet l’affichage avec animation */
+}
+
 
 @media (max-width: 897px) {
   .menu-toggle {
@@ -91,6 +98,14 @@
 
 .size {
 font-size: 14px
+}
+
+.dropbtn.close {
+  background-color: #ff9100;
+  color: white;
+  font-size: 16px;
+  border: none;
+  content: 'x';
 }
 }
 
@@ -193,6 +208,28 @@ Préparez vos bagage pour le 47ème Challenge UJGDV, nous vous embarquons pour u
 </footer>
     <script src="/JS/HOME/Home.js"></script>
     <script src="/JS/HOME/mobile_nav.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const menuToggle = document.querySelector(".menu-toggle button");
+        const dropdownContent = document.querySelector(".dropdown-content");
+    
+        menuToggle.addEventListener("click", function() {
+          // Basculer l'affichage du menu avec la classe .show
+          dropdownContent.classList.toggle("show");
+    
+          // Basculer entre icônes menu et croix
+          if (dropdownContent.classList.contains("show")) {
+            menuToggle.textContent = '✖'; // Icône de croix
+          } else {
+            menuToggle.textContent = '☰'; // Icône de menu
+          }
+        });
+      });
+    </script>
+    
+    
+    
+    
 
 </body>
 
