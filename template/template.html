@@ -5,34 +5,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>47ème Challenge UJGDV à Cheseaux</title>
-    <link rel="stylesheet" href="../template/template.css">
+
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="../../index.html"><img src="/img/logo.png" class="logo"></a></li>
-                <li><a href="../HTML/PROGRAMME/programme.html">Programme</a></li>
-                <li><a href="../HTML/BENEVOLAT/benevolat.html">Bénévolat</a></li>
-                <li><a href="../HTML/SPORT/sport.html">Sport</a></li>
-                <li><a href="../HTML/GADGETS/gadgets.html">Gadgets</a></li>
-                <li><a href="../HTML/INFOS-PRATIQUES/infos-pratques.html">Infos Pratiques</a></li>
-                <li><a href="../HTML/SPONSORS/sponsors.html">Sponsors</a></li>
-                <li><a href="../HTML/MEMBRES/membres.html">Membres</a></li>
-                <li><a href="../HTML/CONTACTS/contacts.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="template">
-        <p>template</p>
-    </section>
-    <footer>
 
-        <p>Suivez-nous sur <a href="https://www.instagram.com/challenge2026cheseaux?igsh=MWh5ZDl4bG12MGhpMQ%3D%3D&utm_source=qr">Instagram</a> et <a href="https://www.tiktok.com/@challenge2026cheseaux?_t=8pqsKsimreS&_r=1">TikTok</a></p>
-        <p>&copy; 47ème Challenge UJGDV à Cheseaux 2026 | Tous droits réservés.</p>
-        <p>Website by Grégory Gilliéron</p>
-    </footer>
+    <div id="header"></div>
+<div id="content">
+    <h1>Contenu principal</h1>
+    <p>Ceci est le contenu de la page.</p>
+</div>
+<div id="footer"></div>
+<script>
+fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('header').innerHTML = data;
+        executeScripts(document.getElementById('header'));
+    });
+
+fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('footer').innerHTML = data;
+        executeScripts(document.getElementById('footer'));
+    });
+
+// Fonction pour exécuter les scripts dans un élément donné
+function executeScripts(element) {
+    const scripts = element.querySelectorAll('script');
+    scripts.forEach(script => {
+        const newScript = document.createElement('script');
+        if (script.src) {
+            newScript.src = script.src; // pour les scripts avec src
+        } else {
+            newScript.textContent = script.textContent; // pour les scripts inline
+        }
+        document.body.appendChild(newScript); // ajoute le script dans le body pour exécution
+        document.body.removeChild(newScript); // nettoie après exécution
+    });
+}
+</script>
+<script>
+    document.getElementById("menuButton").addEventListener("click", function() {
+    const dropdownContent = document.getElementById("dropdownContent");
+    const menuButton = document.getElementById("menuButton");
+    
+    dropdownContent.classList.toggle("show");
+
+    if (dropdownContent.classList.contains("show")) {
+        menuButton.innerHTML = "&#10006;"; // X icon
+    } else {
+        menuButton.innerHTML = "&#9776;"; // Menu icon
+    }
+});
+</script>
 </body>
-
+</body>
 </html>

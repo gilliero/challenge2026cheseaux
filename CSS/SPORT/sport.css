@@ -9,7 +9,7 @@ body {
     background-position: center; /* Centre l'image */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
     font-size: 16px; /* Taille de police par défaut */
-    background-color: #f0f8ff; /* Couleur de fond par défaut (un bleu très clair) */
+    background-color: rgb(0, 217, 255); /* Couleur de fond par défaut (un bleu très clair) */
 }
 
 /* Header */
@@ -74,8 +74,8 @@ nav ul li img.logo {
 /* Section générale */
 section {
     padding: 0px 0px 20px 0px;
-    margin: 20px 0;
-    background: rgba(255, 255, 255, 0.9); /* Légèrement transparent */
+    margin: 0px 0;
+    background-color: rgb(0, 217, 255);
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 162, 255, 0.2);
     display: flex; /* Utiliser Flexbox pour la disposition */
@@ -85,12 +85,15 @@ section {
 
 /* Sections des sports */
 .sport {
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 15px;
+    font-size: 20px;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    padding: 20px;
     margin-bottom: 20px;
     width: calc(50% - 40px); /* Largeur pour deux colonnes, avec espace pour les marges */
     box-sizing: border-box; /* Inclure le padding et la bordure dans la largeur totale */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Style pour les images de sport */
@@ -159,6 +162,7 @@ footer a:hover{
     border-radius: 50px;
     transition: all 0.3s ease;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 .styled-button:hover {
