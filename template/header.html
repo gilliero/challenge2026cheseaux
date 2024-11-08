@@ -183,25 +183,5 @@
             </ul>
         </nav>
     </header>
-
-    <script>
-         document.addEventListener("DOMContentLoaded", function() {
-             console.log("Le JS de l'header est détecté");
-
-            const menuButton = document.querySelector("#menuButton");
-            const dropdownContent = document.querySelector("#dropdownContent");
-
-           menuButton.addEventListener("click", function() {
-               dropdownContent.classList.toggle("show");
-
-               // Basculer entre icônes menu et croix
-              if (dropdownContent.classList.contains("show")) {
-                  menuButton.innerHTML = "&#10006;"; // Icône de croix (X)
-               } else {
-                    menuButton.innerHTML = "&#9776;"; // Icône de menu (☰)
-                }
-            });
-         });
-    </script>
 </body>
 </html>

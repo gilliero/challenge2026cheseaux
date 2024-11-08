@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    background-size: cover; /* L'image couvre toute la zone en maintenant ses proportions */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    font-size: 16px; /* Taille de police par défaut */
+    background-color: rgb(0, 217, 255); /* Couleur de fond par défaut (un bleu très clair) */
+}
+
+.formulaire {
+        font-size: 20px;
+        color: #333;
+        text-align: center;
+        margin: 20px auto;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 20px;
+        border-radius: 15px;
+        width: 60%;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Bouton conteneur */
+.button-container {
+    text-align: center;
+}
+
+.styled-button {
+    background-color: #ff9100;
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.styled-button:hover {
+    background-color: #e07f00;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.styled-button:active {
+    transform: translateY(2px);
+}
