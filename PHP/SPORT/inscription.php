@@ -9,6 +9,7 @@ $sport = isset($_GET["sport"]) ? htmlspecialchars($_GET["sport"]) : "Sport non s
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>47ème Challenge UJGDV à Cheseaux</title>
     <link rel="stylesheet" href="../../CSS/SPORT/inscription.css">
+    <link rel="shortcut icon" href="../../img/logo.png" />
 </head>
 <body>
 <div class="formulaire">
