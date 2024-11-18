@@ -12,6 +12,9 @@
                 display: none;
 }
 
+.dropdown {
+  max-width: 10000px;
+}
 
 /* Bouton du menu avec une apparence élégante */
 .dropbtn {
@@ -33,20 +36,27 @@
 
 /* Conteneur du menu déroulant avec un effet de flou et des bordures arrondies */
 .dropdown-content {
-  position: absolute;
+  position: absolute; /* Maintient l'alignement sous le bouton */
   right: 0;
   background-color: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(10px);
   min-width: 160px;
+  max-width: 100vw; /* Empêche le menu de dépasser la largeur de l'écran */
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
   overflow: hidden;
   opacity: 0;
   transform: translateY(-10px);
   transition: opacity 1s ease, transform 1s ease;
-  visibility:visible; /* Gère l’affichage pour l’animation */
-  width: 100%;
+  visibility: visible; /* Masqué par défaut */
+  margin-top: 0; /* Supprime le décalage */
+  width: 100vw; /* Utilise toute la largeur de la vue */
   margin-top: 39%;
+  text-align: center;
+}
+
+.link {
+  border: 0.5px #b3b3b3 solid;
 }
 
 /* Liens du menu */
@@ -57,6 +67,7 @@
   display: block;
   width: 100%;
   transition: background-color 0.3s ease;
+  font-size: 15px;
 }
 
 .dropdown-content a:hover {
@@ -106,7 +117,7 @@ font-size: 14px
   color: white;
   font-size: 16px;
   border: none;
-  content: 'x';
+  content: '✖';
 }
 }
 
@@ -130,14 +141,14 @@ font-size: 14px
                <div class="dropdown">
                 <li class="menu-toggle"><button class="dropbtn" >&#9776;</button></li>
                 <div class="dropdown-content">
-                  <a href="/Error/Pageindisponible.html">Programme</a>
-                  <a href="/Error/Pageindisponible.html">Bénévolat</a>
-                  <a href="../HTML/SPORT/sport.html">Sport</a>
-                  <a href="/Error/Pageindisponible.html">Gadgets</a>
-                  <a href="/Error/Pageindisponible.html">Infos Pratiques</a>
-                  <a href="/Error/Pageindisponible.html">Sponsors</a>
-                  <a href="/Error/Pageindisponible.html">Membres</a>
-                  <a href="/Error/Pageindisponible.html">Contact</a>
+                  <a href="/Error/Pageindisponible.html" class="link">Programme</a>
+                  <a href="/Error/Pageindisponible.html" class="link">Bénévolat</a>
+                  <a href="../HTML/SPORT/sport.html" class="link">Sport</a>
+                  <a href="/Error/Pageindisponible.html" class="link">Gadgets</a>
+                  <a href="/Error/Pageindisponible.html" class="link">Infos Pratiques</a>
+                  <a href="/Error/Pageindisponible.html" class="link">Sponsors</a>
+                  <a href="/Error/Pageindisponible.html" class="link">Membres</a>
+                  <a href="/Error/Pageindisponible.html" class="link">Contact</a>
                 </div>
                     </div>
             </ul>
@@ -173,7 +184,6 @@ font-size: 14px
     <section id="inscription">
         <p id="b"><strong class="fontsize">Nous avons besoin de toi ! Inscris-toi dès maintenant en tant que bénévole:</strong></p>
         <div class="button-container"><a class="styled-button" href="/Error/Pageindisponible.html">Inscription Bénévolat</a></div>
-        <br>
         <p id="s"><strong class="fontsize">Viens participer aux différents sports avec ta jeunesse ou tes amis:</strong></p>
         <div class="button-container"><a class="styled-button" href="/HTML/SPORT/sport.html">Inscription Sport</a></div>
     
@@ -181,18 +191,18 @@ font-size: 14px
 
     <div>
         <section id="presentation">  
-<p><strong>Prêts à faire le tour du monde en 5 jours avec nous ?</strong><p>
+<p><strong class="titlesize">Prêts à faire le tour du monde en 5 jours avec nous ?</strong><p>
 <p class="size">
 Préparez vos bagage pour le 47ème Challenge UJGDV, nous vous embarquons pour un voyage de 5 jours autour de monde ! Durant ces 5 jours d'aventure festive, vous pourrez participer au différents tounoi sportif que nous proposons chaque jours et pour les moins sportifs d'entre vous, il y a également plein d'activité que vous pouvez découvrir sur notre planning. Le reste du temps vous pourrez visiter notre magnigique place de fête et venir boire un verre ou aller manger un morceaux et bien sûr le soir venir faire la noce !
 <br>
-<h3>Mais c'est quoi un Challenge ?</h3>
+<h3 class="titlesize">Mais c'est quoi un Challenge ?</h3>
 <p class="size">
   Le Challenge UJGDV (Union des Jeunesses du Gros-de-Vaud) est un événement destiné à rassembler les habitants de la région du Gros-de-Vaud. Cette événement est organisée chaque années durant 5 jours par  l'une des jeunesses de l'Union des Jeunesses du Gros-de-Vaud. Durant cette manifestation il y a des tounoi sportif, des activiés, des concerts, et une ambiance festive.
 </p>
 </p>
 </section>
 <section id="programme">
-<p><strong>Film de candidature</strong></p>
+<p><strong class="titlesize">Film de candidature</strong></p>
 
     <div class="video-container">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/c8RmBU6SaHs?si=YZU0CtGapzxR4DkJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 15px;" target="_blank"></iframe>
@@ -220,7 +230,7 @@ Préparez vos bagage pour le 47ème Challenge UJGDV, nous vous embarquons pour u
     
           // Basculer entre icônes menu et croix
           if (dropdownContent.classList.contains("show")) {
-            menuToggle.textContent = 'x'; // Icône de croix
+            menuToggle.textContent = '✖'; // Icône de croix
           } else {
             menuToggle.textContent = '☰'; // Icône de menu
           }

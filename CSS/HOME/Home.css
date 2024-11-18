@@ -188,6 +188,7 @@ footer a:hover {
 /* Bouton conteneur */
 .button-container {
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .styled-button {
@@ -224,6 +225,10 @@ p {
 
 .size {
     font-size: 20px;
+}
+
+.titlesize {
+    font-size: 30px;
 }
 
 /* Conteneur pour vidéo YouTube */
