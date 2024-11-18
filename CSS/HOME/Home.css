@@ -14,7 +14,7 @@ body {
 
 /* Header */
 header {
-    background: #00c8ff;
+    background: rgb(33, 87, 131);
     color: #ff9100;
     text-align: center;
     display: flex;
@@ -34,7 +34,7 @@ header h2 {
 
 /* Navigation */
 nav {
-    background: #00c8ff;
+    background: rgb(33, 87, 131);
     color: #ffffff;
     text-align: center;
 }
