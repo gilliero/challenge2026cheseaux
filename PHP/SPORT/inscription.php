@@ -1,6 +1,5 @@
 <?php
 $sport = isset($_GET["sport"]) ? htmlspecialchars($_GET["sport"]) : "Sport non spécifié";
-echo htmlspecialchars($sport);
 ?>
 
 <!DOCTYPE html>
@@ -9,10 +8,11 @@ echo htmlspecialchars($sport);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>47ème Challenge UJGDV à Cheseaux</title>
-    <link rel="stylesheet" href="../template/template.css">
+    <link rel="stylesheet" href="../../CSS/SPORT/inscription.css">
+    <link rel="shortcut icon" href="../../img/logo.png" />
 </head>
 <body>
-
+<div class="formulaire">
 <h1>Inscription au <?php echo htmlspecialchars($sport); ?></h1>
 
 <form method="POST" action="?sport=<?php echo urlencode($sport); ?>">
@@ -28,8 +28,8 @@ echo htmlspecialchars($sport);
     <label for="telephone">Numéro de téléphone :</label>
     <input type="tel" id="telephone" name="telephone" required><br><br>
 
-    <button type="submit">S'inscrire</button>
+    <div class="button-container"><button class="styled-button" type="submit">S'inscrire</button></div>
 </form>
-
+</div>
 </body>
 </html>

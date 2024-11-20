@@ -4,7 +4,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-image: url("../../img/back.jpg");
+    background: rgb( 51, 125, 169) ;
     color: #ffffff;
     background-size: cover; /* L'image couvre toute la zone en maintenant ses proportions */
     background-position: center; /* Centre l'image */
@@ -14,8 +14,8 @@ body {
 
 /* Header */
 header {
-    background: #00c8ff;
-    color: #ff9100;
+    background: rgb(33, 87, 131);
+    color: rgb( 220, 129, 64);
     text-align: center;
     display: flex;
     justify-content: space-between;
@@ -34,7 +34,7 @@ header h2 {
 
 /* Navigation */
 nav {
-    background: #00c8ff;
+    background: rgb(33, 87, 131);
     color: #ffffff;
     text-align: center;
 }
@@ -54,7 +54,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ff9100;
+    color: rgb( 220, 129, 64);
     text-decoration: none;
     font-weight: bold;
 }
@@ -87,7 +87,7 @@ section h3 {
 
 /* Footer */
 footer {
-    background: #00c8ff;
+    background: rgb(33, 87, 131);
     color: #ffffff;
     text-align: center;
     position: relative;
@@ -101,7 +101,7 @@ footer p {
 }
 
 footer a {
-    color: #ff9100;
+    color: rgb( 220, 129, 64);
     text-decoration: none;
 }
 
@@ -149,7 +149,7 @@ footer a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #ff9100a6;
+    background-color: #2157838a;
     color: white;
     padding: 1rem;
     border-radius: 15px;
@@ -167,7 +167,7 @@ footer a:hover {
 }
 
 #timer .time-box:hover {
-    background: #ff9100;
+    background: #215783;
     transform: scale(1.1);
     transition: 0.3s;
 }
@@ -188,10 +188,11 @@ footer a:hover {
 /* Bouton conteneur */
 .button-container {
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .styled-button {
-    background-color: #ff9100;
+    background-color: rgb(33, 87, 131);
     color: white;
     padding: 1rem;
     text-decoration: none;
@@ -203,7 +204,7 @@ footer a:hover {
 }
 
 .styled-button:hover {
-    background-color: #e07f00;
+    background-color: rgb(21, 64, 100);
     box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
     transform: translateY(-5px);
 }
@@ -224,6 +225,10 @@ p {
 
 .size {
     font-size: 20px;
+}
+
+.titlesize {
+    font-size: 30px;
 }
 
 /* Conteneur pour vidéo YouTube */
@@ -266,12 +271,15 @@ font-size: 32px;
     display: none;
 }
 
+.link {
+    pointer-events: none !important;
+}
 
 /* Média queries pour écrans plus petits */
-@media (max-width: 768px) {
+@media (max-width: 814px) {
 
     body {
-        background-color: rgb(0, 217, 255);
+        background-color: rgb(52, 124, 170);
         background-image: none;
     }
     
@@ -296,7 +304,7 @@ font-size: 32px;
 @media (max-width: 600px) {
 
     body {
-        background-color: rgb(0, 217, 255);
+        background-color: rgb(52, 124, 170);
         background-image: none;
     }
 
@@ -316,5 +324,9 @@ font-size: 32px;
     .time-box {
         width: 40%;
         height: 40%;
+    }
+
+    .link {
+        pointer-events: all;
     }
 }
