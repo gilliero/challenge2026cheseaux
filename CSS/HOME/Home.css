@@ -271,10 +271,6 @@ font-size: 32px;
     display: none;
 }
 
-.link {
-    pointer-events: none !important;
-}
-
 #b {
     line-height: normal;
 }
@@ -339,9 +335,5 @@ font-size: 32px;
     .time-box {
         width: 40%;
         height: 40%;
-    }
-
-    .link {
-        pointer-events: all;
     }
 }
