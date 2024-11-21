@@ -275,6 +275,21 @@ font-size: 32px;
     pointer-events: none !important;
 }
 
+#b {
+    line-height: normal;
+}
+
+#s {
+    line-height: normal;
+}
+
+.titlesize {
+    line-height: normal;
+}
+
+.space {
+    line-height: normal;
+}
 /* Média queries pour écrans plus petits */
 @media (max-width: 814px) {
 
