@@ -1,7 +1,21 @@
+/* Style global */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: rgb( 51, 125, 169) ;
+    color: #ffffff;
+    background-size: cover; /* L'image couvre toute la zone en maintenant ses proportions */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    font-size: 100%; /* Taille de police par défaut */
+}
+
 /* Header */
 header {
     background: rgb(33, 87, 131);
-    color: #ff9100;
+    color: rgb( 220, 129, 64);
     text-align: center;
     display: flex;
     justify-content: space-between;
@@ -40,7 +54,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ff9100;
+    color: rgb( 220, 129, 64);
     text-decoration: none;
     font-weight: bold;
 }
@@ -57,6 +71,8 @@ nav ul li a:hover {
     margin-left: 20px;
 }
 
+
+
 .menu-toggle {
     display: none;
 }
@@ -67,7 +83,7 @@ max-width: 10000px;
 
 /* Bouton du menu avec une apparence élégante */
 .dropbtn {
-background-color: #ff9100;
+background-color: rgb( 123, 44, 50);
 color: white;
 padding: 10px;
 font-size: 18px;
@@ -80,7 +96,7 @@ border-radius: 5px;
 }
 
 .dropbtn:hover {
-background-color: #e07f00;
+background-color: rgb(105, 32, 38);
 }
 
 /* Conteneur du menu déroulant avec un effet de flou et des bordures arrondies */
@@ -100,18 +116,20 @@ transition: opacity 1s ease, transform 1s ease;
 visibility: visible; /* Masqué par défaut */
 margin-top: 0; /* Supprime le décalage */
 width: 100vw; /* Utilise toute la largeur de la vue */
-margin-top: 39%;
-text-align: center;
+margin-top: 53%;
+text-align: left;
+pointer-events: none; /* Désactive les clics par défaut */
 }
 
 .link {
-border: 0.5px #b3b3b3 solid;
+border-top: 0.5px #b3b3b3 solid;
+border-bottom: 0.5px #b3b3b3 solid;
 }
 
 /* Liens du menu */
 .dropdown-content a {
 color: #333;
-padding: 12px 16px;
+padding: 12px 22px;
 text-decoration: none;
 display: block;
 width: 100%;
@@ -125,9 +143,9 @@ background-color: #f1f1f1;
 
 /* Classe pour afficher le menu avec animation */
 .dropdown-content.show {
-opacity: 1;
-transform: translateY(0);
-visibility: visible; /* Permet l’affichage avec animation */
+pointer-events: auto; /* Active les clics quand visible */
+visibility: visible; /* Rendu visible */
+opacity: 1; /* Menu complètement opaque */
 }
 
 
@@ -140,8 +158,25 @@ display: inline-block;
 display: none;
 }
 
+.time-box {
+width: 30%;
+height: auto;
+}
+
+.fontsize {
+font-size: 25px;
+display: block;
+}
+
 .styled-button {
 margin-bottom: 20px;
+}
+#presentation{
+font-size: 1.8rem;
+}
+
+.size {
+font-size: 14px
 }
 
 .dropbtn.close {

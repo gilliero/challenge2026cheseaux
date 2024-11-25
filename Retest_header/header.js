@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-  console.log("Hello Greg!");
   
   const menuToggle = document.querySelector("#menuToggleBtn"); // Cible le bouton directement
   const dropdownContent = document.querySelector(".dropdown-content");
