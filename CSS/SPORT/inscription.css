@@ -11,6 +11,65 @@ body {
     background-color: rgb( 51, 125, 169)
 }
 
+/* Header */
+header {
+    background: rgb(33, 87, 131);
+    color: rgb( 220, 129, 64);
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+/* Navigation */
+nav {
+    background: rgb(33, 87, 131);
+    color: #ffffff;
+    text-align: center;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    display: flex;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+nav ul li { 
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: rgb( 220, 129, 64);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Logo dans la barre de navigation */
+.logo {
+    width: 75px;
+    height: 75px;
+    vertical-align: middle;
+    margin-left: 20px;
+}
+
 .formulaire {
         font-size: 20px;
         color: #333;
