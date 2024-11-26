@@ -1,5 +1,58 @@
 <?php
-$sport = isset($_GET["sport"]) ? htmlspecialchars($_GET["sport"]) : "Sport non spécifié";
+$sport = isset($_GET['sport']) ? htmlspecialchars($_GET['sport']) : "Sport non spécifié";
+
+// Variables de connexion à la base de données
+$host = "localhost"; // Adresse du serveur de base de données
+$dbname = "challenge2026cheseaux"; // Nom de la base de données
+$username = "root"; // Nom d'utilisateur
+$password = "root"; // Mot de passe
+
+// Établir une connexion à la base de données
+// Ajouter la connexion à la base de données avant d'utiliser $pdo
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Erreur de connexion à la base de données : " . $e->getMessage());
+}
+
+// Ajouter cette condition pour exécuter le traitement uniquement après soumission du formulaire
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Récupérer et valider les données du formulaire
+    $nom_equipe = isset($_POST['nom_equipe']) ? htmlspecialchars($_POST['nom_equipe']) : null;
+    $nombre_equipes = isset($_POST['nombre_equipes']) ? intval($_POST['nombre_equipes']) : null;
+    $email = isset($_POST['email']) ? filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) : null;
+    $telephone = isset($_POST['telephone']) ? htmlspecialchars($_POST['telephone']) : null;
+
+    // Vérifier que toutes les données nécessaires sont fournies
+    if ($nom_equipe && $nombre_equipes && $email && $telephone) {
+        try {
+            // Préparer et exécuter la requête d'insertion
+            $stmt = $pdo->prepare("
+                INSERT INTO t_sport (nom_sport, equipe_sport, nombre_sport, mail_sport, phone_sport)
+                VALUES (:nom_sport, :equipe_sport, :nombre_sport, :mail_sport, :phone_sport)
+            ");
+
+            $stmt->execute([
+                ':nom_sport' => $sport,
+                ':equipe_sport' => $nom_equipe,
+                ':nombre_sport' => $nombre_equipes,
+                ':mail_sport' => $email,
+                ':phone_sport' => $telephone,
+            ]);
+
+            // Redirection en cas de succès
+            header("Location: ../../HTML/SPORT/sport.html");
+            exit;
+        } catch (PDOException $e) {
+            die("Erreur lors de l'enregistrement des données : " . $e->getMessage());
+        }
+    } else {
+        die("Veuillez remplir tous les champs du formulaire.");
+    }
+}
+
+
 ?>
 
 <!DOCTYPE html>
