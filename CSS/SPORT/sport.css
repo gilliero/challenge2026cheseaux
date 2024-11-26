@@ -140,7 +140,7 @@ h2 {
 }
 
 footer a {
-    color: #ff9100;
+    color: rgb( 220, 129, 64);
 }
 
 footer a:hover{
@@ -173,6 +173,11 @@ footer a:hover{
 
 .styled-button:active {
     transform: translateY(2px);
+}
+
+p {
+    text-align: center;
+    text-justify: auto;
 }
 
 @media (max-width: 897px) {
