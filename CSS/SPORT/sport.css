@@ -107,7 +107,7 @@ section {
 
 /* Footer */
 footer {
-    background: #00c8ff;
+    background: rgb(33, 87, 131);
     color: #ffffff;
     text-align: center;
     position: relative;
@@ -121,7 +121,7 @@ footer p {
 }
 
 footer a {
-    color: #ff9100;
+    color: rgb( 220, 129, 64);
     text-decoration: none;
 }
 

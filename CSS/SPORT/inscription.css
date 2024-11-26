@@ -70,6 +70,30 @@ nav ul li a:hover {
     margin-left: 20px;
 }
 
+/* Footer */
+footer {
+    background: rgb(33, 87, 131);
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    color: #fff;
+}
+
+footer a {
+    color: rgb( 220, 129, 64);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
 .formulaire {
         font-size: 20px;
         color: #333;
