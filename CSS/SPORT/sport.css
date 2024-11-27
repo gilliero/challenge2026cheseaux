@@ -180,6 +180,10 @@ p {
     text-justify: auto;
 }
 
+h3 {
+    text-align: center;
+}
+
 @media (max-width: 897px) {
 .sport {
 width: 90%;
