@@ -227,7 +227,7 @@ font-size: 14px
     <label for="telephone">Numéro de téléphone :</label>
     <input type="tel" id="telephone" name="telephone" required><br><br>
 
-    <div class="button-container"><button class="styled-button" type="submit">S'inscrire</button></div>
+    <div class="button-container"><button class="styled-button" type="submit">Inscrire</button></div>
 </form>
 </div>
 <footer>

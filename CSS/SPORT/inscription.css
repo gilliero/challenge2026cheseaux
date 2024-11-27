@@ -101,18 +101,18 @@ footer a:hover {
         margin: 20px auto;
         background-color: rgba(255, 255, 255, 0.7);
         padding: 20px;
-        border-radius: 15px;
+        border-radius: 5px;
         width: 60%;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     }
 
-    /* Bouton conteneur */
+ /* Bouton conteneur */
 .button-container {
     text-align: center;
 }
 
 .styled-button {
-    background-color: #ff9100;
+    background-color: rgb(33, 87, 131);
     color: white;
     padding: 1rem;
     text-decoration: none;
@@ -121,16 +121,13 @@ footer a:hover {
     border-radius: 50px;
     transition: all 0.3s ease;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 .styled-button:hover {
-    background-color: #e07f00;
+    background-color: rgb(21, 64, 100);
     box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
     transform: translateY(-5px);
-}
-
-.styled-button:active {
-    transform: translateY(2px);
 }
 
 .input {
