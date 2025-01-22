@@ -1,5 +1,5 @@
 // Définir la date cible
-const countDownDate = new Date("Jul 15, 2026 16:00:00").getTime();
+const countDownDate = new Date("Aug 5, 2026 16:00:00").getTime();
 
 const countdownFunction = setInterval(() => {
     const now = new Date().getTime();

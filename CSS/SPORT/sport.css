@@ -1,6 +1,27 @@
 /* Style global */
+@font-face {
+    font-family: 'NexaRustSans-Trial-Black2';
+    src: url(../../fonts/NexaRustSans-Trial-Black2.ttf);
+}
+
+@font-face {
+    font-family: 'Barlow-Black';
+    src: url(../../fonts/Barlow-Black.ttf);
+}
+
+@font-face {
+    font-family: 'Barlow-Light';
+    src: url(../../fonts/Barlow-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Barlow-Medium';
+    src: url(../../fonts/Barlow-Medium.ttf);
+}
+
+/* Style global */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Barlow-Medium', Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -9,17 +30,24 @@ body {
     background-position: center; /* Centre l'image */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
     font-size: 16px; /* Taille de police par défaut */
-    background-color: rgb( 51, 125, 169); /* Couleur de fond par défaut (un bleu très clair) */
+    background: rgb(33, 87, 131);
 }
 
 /* Header */
 header {
-    background: rgb(33, 87, 131);
+    background: rgb(26, 62, 91);
     color: rgb( 220, 129, 64);
     text-align: center;
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
+}
+
+h2 {
+    font-family: 'Barlow-Black';
+    color: #ffffff;
+    font-size: 50px;
+    margin: 10px;
 }
 
 header h1 {
@@ -34,7 +62,7 @@ header h2 {
 
 /* Navigation */
 nav {
-    background: rgb(33, 87, 131);
+    background: rgb(26, 62, 91);
     color: #ffffff;
     text-align: center;
 }
@@ -75,7 +103,7 @@ nav ul li a:hover {
 section {
     padding: 0px 0px 20px 0px;
     margin: 0px 0;
-    background-color: rgb( 51, 125, 169);
+    background: rgb(33, 87, 131);
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 162, 255, 0.2);
     display: flex; /* Utiliser Flexbox pour la disposition */
@@ -90,6 +118,7 @@ section {
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 15px;
     padding: 20px;
+    margin-top: 20px;
     margin-bottom: 20px;
     width: calc(50% - 40px); /* Largeur pour deux colonnes, avec espace pour les marges */
     box-sizing: border-box; /* Inclure le padding et la bordure dans la largeur totale */
@@ -107,7 +136,7 @@ section {
 
 /* Footer */
 footer {
-    background: rgb(33, 87, 131);
+    background: rgb(26, 62, 91);
     color: #ffffff;
     text-align: center;
     position: relative;
@@ -153,7 +182,7 @@ footer a:hover{
 }
 
 .styled-button {
-    background-color: rgb(33, 87, 131);
+    background-color: rgb(220, 129, 64);
     color: white;
     padding: 1rem;
     text-decoration: none;
@@ -166,8 +195,8 @@ footer a:hover{
 }
 
 .styled-button:hover {
-    background-color: rgb(21, 64, 100);
-    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+    background-color: rgb(211, 116, 48);;
+    box-shadow: 0px 6px 20px rgb(220, 129, 64);
     transform: translateY(-5px);
 }
 
