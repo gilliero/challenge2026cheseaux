@@ -158,11 +158,13 @@ font-size: 14px
             </ul>
         </nav>
     </header>
+    <div id="Home-page">
+      <br>
+      <div id="Gros-titre">
     <p id="title">CHESEAUX 2026</p>
     <p id="sous-title">Challenge UJGDV du 5 au 9 août</p>
     <p id="mini-title">--- le tour du monde en 5 jours ---</p>
-    <section id="countdown">
-        <p><strong>47ème Challenge UJGDV à Cheseaux :</strong></p>
+      </div>
         <div id="timer">
             <div class="time-box">
                 <span id="days"></span>
@@ -181,41 +183,45 @@ font-size: 14px
                 <div class="label">secondes</div>
             </div>
         </div>
-        <p><strong>du 5 au 9 août 2026 !</strong></p>
-    </section>
-    
-    
-
-    <section id="inscription">
-        <p id="b"><strong class="fontsize">Nous avons besoin de toi ! Inscris-toi dès maintenant en tant que bénévole:</strong></p>
-        <div class="button-container"><a class="styled-button" href="/Error/Pageindisponible.html">Inscription Bénévolat</a></div>
-        <p id="s"><strong class="fontsize">Viens participer aux différents sports avec ta jeunesse ou tes amis:</strong></p>
-        <div class="button-container"><a class="styled-button" href="/HTML/SPORT/sport.html">Inscription Sport</a></div>
-    
-    </section>
-
-    <div>
-        <section id="presentation">  
-<p class="space"><strong class="titlesize">Prêts à faire le tour du monde en 5 jours avec nous ?</strong><p>
-<p class="size">
-Préparez vos bagage pour le 47ème Challenge UJGDV, nous vous embarquons pour un voyage de 5 jours autour de monde ! Durant ces 5 jours d'aventure festive, vous pourrez participer au différents tounoi sportif que nous proposons chaque jours et pour les moins sportifs d'entre vous, il y a également plein d'activité que vous pouvez découvrir sur notre planning. Le reste du temps vous pourrez visiter notre magnigique place de fête et venir boire un verre ou aller manger un morceaux et bien sûr le soir venir faire la noce !
-<br><br>
-<h3 class="titlesize" class="space">Mais c'est quoi un Challenge ?</h3>
-<p class="size">
-  Le Challenge UJGDV (Union des Jeunesses du Gros-de-Vaud) est un événement destiné à rassembler les habitants de la région du Gros-de-Vaud. Cette événement est organisée chaque années durant 5 jours par  l'une des jeunesses de l'Union des Jeunesses du Gros-de-Vaud. Durant cette manifestation il y a des tounoi sportif, des activiés, des concerts, et une ambiance festive.
-</p>
-</p>
-</section>
-<section id="programme">
-<p class="space"><strong class="titlesize">Film de candidature</strong></p>
-
-    <div class="video-container">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/c8RmBU6SaHs?si=YZU0CtGapzxR4DkJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 15px;" target="_blank"></iframe>
-</div>
-</section>
-<br>
+        <br>
     </div>
-</section>
+<div id="withe-page">
+  <div class="carousel">
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <img id="carousel-img" src="/img/Test/lutte.png">
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+</div>
+<div id="Bénévolat">      
+<p id="text">Prêt à nous donner un coup de mains ?</p>
+<div id="button-ctn">
+  <a id="btn" href="/HTML/BENEVOLAT/benevolat.html">Bénévolat</a>
+  </div>
+  </div>
+<div id="sport">
+  <p id="text">Chaud du sport ?</p>
+<div id="button-ctn">
+  <a id="btn" href="/HTML/BENEVOLAT/benevolat.html">Bénévolat</a>
+</div>
+</div>
+
+<div class="sponsor-carousel">
+  <button class="prev" onclick="changeSlide2(-1)">&#10094;</button>
+  <div class="carousel-container">
+      <div class="carousel-track">
+          <img src="./img/logo.png" alt="Sponsor 1">
+          <img src="./img/logo.png" alt="Sponsor 2">
+          <img src="./img/logo.jpg" alt="Sponsor 3">
+          <img src="./img/logo.png" alt="Sponsor 4">
+          <img src="./img/logo.png" alt="Sponsor 5">
+          <img src="./img/logo.jpg" alt="Sponsor 6">
+      </div>
+  </div>
+  <button class="next" onclick="changeSlide2(1)">&#10095;</button>
+</div>
+
+
+
+</div>
 <footer>
   <br>
     <p>Suivez-nous sur <a href="https://www.instagram.com/challenge2026cheseaux?igsh=MWh5ZDl4bG12MGhpMQ%3D%3D&utm_source=qr" target="_blank">Instagram</a> et <a href="https://www.tiktok.com/@challenge2026cheseaux?_t=8pqsKsimreS&_r=1" target="_blank">TikTok</a></p>
@@ -223,6 +229,8 @@ Préparez vos bagage pour le 47ème Challenge UJGDV, nous vous embarquons pour u
     <br>
 </footer>
     <script src="/JS/HOME/Home.js"></script>
+    <script src="/JS/HOME/carousel.js"></script>
+    <script src="/JS/HOME/sponsors.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function() {
         const menuToggle = document.querySelector(".menu-toggle button");
