@@ -1,54 +1,65 @@
-    // Sélectionne les boutons
-    const btnComité = document.getElementById("btnComité");
-    const btnResponsables = document.getElementById("btnResponsables");
-    const btnMembres = document.getElementById("btnMembres");
-    const btnTous = document.getElementById("btnTous");
+// Sélectionne les boutons
+const btnComité = document.getElementById("btnComité");
+const btnResponsables = document.getElementById("btnResponsables");
+const btnMembres = document.getElementById("btnMembres");
+const btnTous = document.getElementById("btnTous");
 
-    // Sélectionne les éléments avec les IDs correspondants
-    const tousElements = document.querySelectorAll('.show');
+// Fonction pour cacher les éléments avec animation et ajuster les autres
+function hideWithAnimation(selectors) {
+    const elementsToHide = document.querySelectorAll(selectors);
+    const visibleElements = document.querySelectorAll('.show:not(' + selectors + ')');
 
-    // Fonction pour afficher uniquement le comité
-    btnComité.addEventListener('click', () => {
-        // Cache les éléments avec les IDs "membre" et "responsable"
-        document.querySelectorAll('#membre, #responsable').forEach(element => {
-            element.style.display = 'none';
-        });
-        
-        // Affiche les éléments du comité
-        document.querySelectorAll('#comité').forEach(element => {
-            element.style.display = 'block';
-        });
+    // Ajoute l'effet de glissement aux éléments qui restent visibles
+    visibleElements.forEach(element => {
+        element.classList.add("slide-up");
+        setTimeout(() => {
+            element.classList.remove("slide-up");
+        }, 500);
     });
 
-    // Fonction pour afficher les responsables
-    btnResponsables.addEventListener('click', () => {
-        // Cache les éléments avec les IDs "membre" et "comité"
-        document.querySelectorAll('#membre, #comité').forEach(element => {
-            element.style.display = 'none';
-        });
+    // Applique l'animation de disparition aux éléments cachés
+    elementsToHide.forEach(element => {
+        element.classList.add("fade-out");
 
-        // Affiche les éléments des responsables
-        document.querySelectorAll('#responsable').forEach(element => {
-            element.style.display = 'block';
-        });
+        // Après l'animation, cache l'élément
+        setTimeout(() => {
+            element.style.display = "none";
+            element.classList.remove("fade-out");
+        }, 600);
     });
+}
 
-    // Fonction pour afficher les membres
-    btnMembres.addEventListener('click', () => {
-        // Cache les éléments avec les IDs "responsable" et "comité"
-        document.querySelectorAll('#responsable, #comité').forEach(element => {
-            element.style.display = 'none';
-        });
+// Fonction pour afficher les éléments avec animation
+function showElements(selectors) {
+    document.querySelectorAll(selectors).forEach(element => {
+        if (element.style.display === "none" || element.style.display === "") {
+            element.style.display = "block"; // Ré-affiche l'élément
+            element.classList.add("fade-in"); // Applique l'animation d'apparition
 
-        // Affiche les éléments des membres
-        document.querySelectorAll('#membre').forEach(element => {
-            element.style.display = 'block';
-        });
+            // Supprime l'animation après exécution pour éviter des bugs
+            setTimeout(() => {
+                element.classList.remove("fade-in");
+            }, 600);
+        }
     });
+}
 
-    // Fonction pour afficher tous les éléments
-    btnTous.addEventListener('click', () => {
-        tousElements.forEach(element => {
-            element.style.display = 'block';
-        });
-    });
+// Gestion des clics
+btnComité.addEventListener("click", () => {
+    hideWithAnimation("#membre, #responsable");
+    showElements("#comité");
+});
+
+btnResponsables.addEventListener("click", () => {
+    hideWithAnimation("#membre, #comité");
+    showElements("#responsable");
+});
+
+btnMembres.addEventListener("click", () => {
+    hideWithAnimation("#responsable, #comité");
+    showElements("#membre");
+});
+
+btnTous.addEventListener("click", () => {
+    showElements(".show"); // Ré-affiche tous les éléments avec animation
+});
