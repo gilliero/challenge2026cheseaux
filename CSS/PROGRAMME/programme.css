@@ -1,0 +1,177 @@
+/* Style global */
+@font-face {
+    font-family: 'NexaRustSans-Trial-Black2';
+    src: url(../../fonts/NexaRustSans-Trial-Black2.ttf);
+}
+
+@font-face {
+    font-family: 'Barlow-Black';
+    src: url(../../fonts/Barlow-Black.ttf);
+}
+
+@font-face {
+    font-family: 'Barlow-Light';
+    src: url(../../fonts/Barlow-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Barlow-Medium';
+    src: url(../../fonts/Barlow-Medium.ttf);
+}
+
+body {
+    font-family: 'Barlow-Medium', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: rgb(33, 87, 131) ;
+    color: #ffffff;
+    background-size: cover; /* L'image couvre toute la zone en maintenant ses proportions */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    font-size: 100%; /* Taille de police par défaut */
+    padding-top: 60px;
+}
+
+/* Header */
+header {
+    background: rgb(26 62 91);
+    color: rgb( 220, 129, 64);
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+/* Navigation */
+nav {
+    background: rgb(26 62 91);
+    color: #ffffff;
+    text-align: center;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    display: flex;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+nav ul li { 
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: rgb( 220, 129, 64);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Logo dans la barre de navigation */
+.logo {
+    width: 75px;
+    height: 75px;
+    vertical-align: middle;
+    margin-left: 20px;
+}
+
+/* Footer */
+footer {
+    background: rgb(26 62 91);
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    color: #fff;
+}
+
+footer a {
+    color: rgb( 220, 129, 64);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+ #Home-page {
+    background: linear-gradient(rgb(26, 62, 91) 35%, white 100%);
+ }
+
+ #withe-page {
+    background: linear-gradient(white, rgb(26, 62, 91));
+ }
+
+h1 {
+    text-align: center;
+    font-family: "Barlow-Black";
+    font-size: 50px;
+}
+
+/* Bouton conteneur */
+.button-container {
+    text-align: center;
+    margin: 20px;
+    display: flex;
+    justify-content: center; /* Centre les boutons horizontalement */
+    gap: 1rem; /* Ajoute un espace entre les boutons */
+    flex: 0 1 auto; /* S'assure que chaque bouton garde sa taille propre */
+    align-items: center;
+}
+
+.styled-button {
+    background-color: rgb(220, 129, 64);
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 0 5px;
+    justify-content: center;
+}
+
+.styled-button:hover {
+    background-color: rgb(211, 116, 48);;
+    box-shadow: 0px 6px 20px rgb(220, 129, 64);
+    transform: translateY(-5px);
+}
+
+.styled-button:active {
+    transform: translateY(2px);
+}
+
+#Prog {
+    background-color: rgb( 220, 129, 64);
+    margin: 20px 25%;
+    border-radius: 15px;
+}
